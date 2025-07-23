@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Ethereal - Juego Espacial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Pantalla de inicio -->
+        <div id="startScreen" class="screen">
+            <div class="screen-content">
+                <h1 class="game-title">COSMIC ETHEREAL</h1>
+                <p class="game-subtitle">Aventura Espacial Mágica</p>
+                <button id="startButton" class="game-button">INICIAR JUEGO</button>
+                <div class="instructions">
+                    <p><strong>Controles:</strong></p>
+                    <p>PC: Flechas/WASD para mover, ESPACIO para disparar</p>
+                    <p>Móvil: Toca la pantalla para mover y disparar</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pantalla de pausa -->
+        <div id="pauseScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2>JUEGO PAUSADO</h2>
+                <button id="resumeButton" class="game-button">CONTINUAR</button>
+                <button id="restartButton" class="game-button">REINICIAR</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla de fin de juego -->
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2>JUEGO TERMINADO</h2>
+                <p id="finalScore">Puntuación: 0</p>
+                <p id="highScore">Mejor puntuación: 0</p>
+                <button id="playAgainButton" class="game-button">JUGAR DE NUEVO</button>
+            </div>
+        </div>
+        
+        <!-- HUD del juego -->
+        <div id="gameHUD" class="hidden">
+            <div class="hud-top">
+                <div class="score">Puntuación: <span id="scoreValue">0</span></div>
+                <div class="lives">Vidas: <span id="livesValue">3</span></div>
+                <button id="pauseButton" class="pause-btn">⏸</button>
+            </div>
+        </div>
+        
+        <!-- Controles táctiles para móvil -->
+        <div id="mobileControls" class="hidden">
+            <div id="joystick" class="joystick">
+                <div id="joystickKnob" class="joystick-knob"></div>
+            </div>
+            <button id="fireButton" class="fire-button">🔥</button>
+        </div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/audioManager.js"></script>
+    <script src="js/particleSystem.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/projectile.js"></script>
+    <script src="js/celestialObject.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
