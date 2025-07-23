@@ -312,4 +312,16 @@ body {
         transform: scale(0) translateY(-100px);
     }
 }
+/* Mantener proporción del canvas en móviles */
+@media (max-width: 768px) {
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 85vh;
+    object-fit: contain;
+    display: block;
+  }
+}
+
 
